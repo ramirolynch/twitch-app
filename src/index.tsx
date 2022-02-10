@@ -3,10 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import {SearchPage} from './Components/SearchPage';
+import { FavoritesPage } from './Components/FavoritesPage';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+      <Routes>
+        <Route path='/' element={<SearchPage/>}/>
+        <Route path='/Favorites' element={<FavoritesPage/>}/>
+        <Route path='*' element={<Navigate to="/"/>}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
