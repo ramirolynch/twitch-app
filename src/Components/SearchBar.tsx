@@ -1,12 +1,15 @@
+import { useState } from "react";
 
 
-export function SearchBar() {
+export function SearchBar(props: {onSubmit: (channelSearch:string) => void}) {
+
+    const [channelSearch, setChannelSearch] = useState('');
 
     return (
 
         <div>
-            <input type='text' name='channelSearch'/>
-            <button>Search</button>
+            <input value={channelSearch} onChange={(e) => setChannelSearch(e.target.value)} type='text' name='channelSearch'/>
+            <button onClick={() => props.onSubmit(channelSearch)}>Search</button>
         </div>
     );
 }
