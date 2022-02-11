@@ -21,7 +21,7 @@ export function StreamContextProvider({children}:Props) {
     }
 
     return (
-        <StreamContext.Provider value={{streamList, favorites, addFave, removeFave, setStreamList, setFavorites }}>
+        <StreamContext.Provider value={{streamList, favorites, addFave, removeFave, setFavorites, setStreamList }}>
             {children}
         </StreamContext.Provider>  
     );
