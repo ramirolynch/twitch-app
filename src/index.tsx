@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import {SearchPage} from './Components/SearchPage';
 import { FavoritesPage } from './Components/FavoritesPage';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route path='/' element={<SearchPage/>}/>
         <Route path='/Favorites' element={<FavoritesPage/>}/>
         <Route path='*' element={<Navigate to="/"/>}/>
+        
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
