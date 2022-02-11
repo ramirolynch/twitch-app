@@ -16,7 +16,7 @@ export function StreamContextProvider({children}:Props) {
         setStreamList([...favorites,stream])
     }
 
-    function removeItem(id:string) {
+    function removeFave(id:string) {
     setFavorites(favorites.filter((stream)=> stream.user_id != id));
     
     }
