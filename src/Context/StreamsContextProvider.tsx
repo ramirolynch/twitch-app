@@ -1,8 +1,7 @@
 import {  ReactNode, useState } from "react";
 import { isTemplateSpan } from "typescript";
 import { Stream } from "../Models/Stream";
-import { StreamContext } from "../Context/StreamContext";
-//import menu from '../MenuArray'
+import { StreamContext } from "C://Users/dloka/Desktop/GC-Work/react-twitch-project/src/Context/StreamsContext";
 
 
 interface Props {children:ReactNode;}
@@ -13,16 +12,16 @@ export function StreamContextProvider({children}:Props) {
     const [favorites, setFavorites] = useState<Stream[]>([])
 
     function addFave(stream:Stream) {
-        setOrder([...favorites,stream])
+        setStreamList([...favorites,stream])
     }
 
-    function removeItem(id:string) {
+    function removeFave(id:string) {
     setFavorites(favorites.filter((stream)=> stream.user_id != id));
     
     }
 
     return (
-        <StreamContext.Provider value={{streamList, favorites, addFave, removeFave, setStream, setFavorites }}>
+        <StreamContext.Provider value={{streamList, favorites, addFave, removeFave, setStreamList, setFavorites }}>
             {children}
         </StreamContext.Provider>  
     );
