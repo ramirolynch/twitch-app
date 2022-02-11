@@ -7,7 +7,7 @@ export interface StreamContextModel {
     streamList:Stream[];
     favorites:Stream[];
     addFave:(stream:Stream)=>void;
-    removeItem:(id:string)=>void;
+    removeFave:(id:string)=>void;
 }
 
 const defaultValue:StreamContextModel = {

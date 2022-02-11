@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { getStreamResponse } from "../Service/TwitchApi";
 import { SearchResults } from "./SearchResults";
 
 
