@@ -1,7 +1,7 @@
 import {  ReactNode, useState } from "react";
 import { isTemplateSpan } from "typescript";
 import { Stream } from "../Models/Stream";
-import { StreamContext } from "C://Users/dloka/Desktop/GC-Work/react-twitch-project/src/Context/StreamsContext";
+import { StreamContext } from "../Context/StreamsContext";
 
 
 interface Props {children:ReactNode;}
