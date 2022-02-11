@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { ResultsList } from "./ResultsList";
+import { SearchResults } from "./SearchResults";
 
 
 export function Main() {

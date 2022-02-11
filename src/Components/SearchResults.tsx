@@ -1,6 +1,6 @@
 
 
-export function ResultsList() {
+export function SearchResults() {
 
     return (
 
