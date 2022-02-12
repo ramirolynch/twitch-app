@@ -1,19 +1,25 @@
 import React from "react";
-import { useState } from "react";
+import { Stream } from "../Models/Stream";
 
 
-export function SearchResults() {
 
-
-    const  [streams, setStreams] = useState([])
+export function SearchResults(props: {stream:Stream[]}) {
 
 
     
 
-    return (
 
-        <ul>
-            <li>result example</li>
-        </ul>
+
+
+    return (
+    <div>
+            {/* <p>   {props.stream.user_id}</p> 
+               <p>Thumbnail:  <img src={} /></p>  */}
+
+            
+            
+
+    </div>
+        
     );
 }
