@@ -1,6 +1,6 @@
 import {  ReactNode, useEffect, useState } from "react";
 import { isTemplateSpan } from "typescript";
-import { Stream, Streams } from "../Models/Stream";
+import { Channel, Stream, Streams } from "../Models/Stream";
 import { StreamContext } from "../Context/StreamsContext";
 
 
@@ -10,30 +10,33 @@ interface Props {children:ReactNode;}
 
 export function StreamContextProvider({children}:Props) {
 
-    const[streams, setStreams] = useState<Stream[]>([]);
 
-       useEffect(() =>{
-    
-        // getStreamResponse().then(response => setStreams(response.data));
-    
+const [favorites, setFavorites] = useState<Stream[]>([])
 
-       }, []);
+function addFave(stream:Stream) {
+    setFavorites([...favorites,stream]);
+}
 
-    const [streamList, setStreamList] = useState<Stream[]>(streams) // between parenthesis we put the list of streams that we want in the context.
-    const [favorites, setFavorites] = useState<Stream[]>([])
+function removeFave(id:string) {
+    setFavorites(favorites.filter((stream)=> stream.user_id != id));
 
-    function addFave(stream:Stream) {
-        setFavorites([...favorites,stream]);
-    }
+}
 
-    function removeFave(id:string) {
-        setFavorites(favorites.filter((stream)=> stream.user_id != id));
-    
-    }
+const [faveChannels, setFaveChannels] = useState<Channel[]>([]);
+
+function addFaveChannel(channel:Channel) {
+    setFaveChannels([...faveChannels,channel]);
+}
+
+function removeFaveChannel(id:string) {
+    setFaveChannels(faveChannels.filter((channel)=> channel.id != id));
+
+}
+
 
     return (
 
-        <StreamContext.Provider value={{streamList, favorites, addFave, removeFave}}>
+        <StreamContext.Provider value={{faveChannels, addFaveChannel, removeFaveChannel, favorites, addFave, removeFave}}>
             {children}
         </StreamContext.Provider>  
     );
