@@ -5,6 +5,10 @@ import { SearchResults } from "./SearchResults";
 import { Streams } from "../Models/Stream";
 
 
+
+
+
+
 export function SearchPage() {
 
     const [searchTerm, setSearchTerm] = useState('');
@@ -18,15 +22,15 @@ export function SearchPage() {
         // fetchSearchedChannels(searchTerm).then(response => setSearchList(response));
     },[searchTerm]);
 
-    return (
+        return (
 
-        <div>
+            <div>
 
-            <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type='text' name='channelSearch'/>
-            <button onClick={() => setSearchTerm(searchTerm)}>Search</button>
+                <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type='text' name='channelSearch'/>
+                <button onClick={() => setSearchTerm(searchTerm)}>Search</button>
 
-            <SearchResults></SearchResults>
+                <SearchResults></SearchResults>
 
-        </div>
-    );
+            </div>
+        );
 }

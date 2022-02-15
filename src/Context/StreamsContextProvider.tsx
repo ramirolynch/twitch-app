@@ -1,14 +1,25 @@
-import {  ReactNode, useState } from "react";
+import {  ReactNode, useEffect, useState } from "react";
 import { isTemplateSpan } from "typescript";
-import { Stream } from "../Models/Stream";
-import { StreamContext } from "C://Users/dloka/Desktop/GC-Work/react-twitch-project/src/Context/StreamsContext";
+import { Stream, Streams } from "../Models/Stream";
+import { StreamContext } from "../Context/StreamsContext";
+
+
 
 
 interface Props {children:ReactNode;}
 
 export function StreamContextProvider({children}:Props) {
 
-    const [streamList, setStreamList] = useState<Stream[]>([]) // between parenthesis we put the list of streams that we want in the context.
+    const[streams, setStreams] = useState<Stream[]>([]);
+
+       useEffect(() =>{
+    
+        // getStreamResponse().then(response => setStreams(response.data));
+    
+
+       }, []);
+
+    const [streamList, setStreamList] = useState<Stream[]>(streams) // between parenthesis we put the list of streams that we want in the context.
     const [favorites, setFavorites] = useState<Stream[]>([])
 
     function addFave(stream:Stream) {
@@ -21,6 +32,7 @@ export function StreamContextProvider({children}:Props) {
     }
 
     return (
+
         <StreamContext.Provider value={{streamList, favorites, addFave, removeFave}}>
             {children}
         </StreamContext.Provider>  

@@ -3,14 +3,19 @@ import { Stream } from "../Models/Stream";
 import { Result } from "./Result";
 
 
-export function SearchResults() {
 
     const [streamResults, setStreamResults] = useState<Stream[]>([]);
 
-    return (
+    export function SearchResults() {
 
-        <ul>
-            {streamResults.map((stream, i) => <Result key={i} stream={stream}></Result>)}
-        </ul>
+
+        return (
+        <div>
+            
+            <ul>
+                {streamResults.map((stream, i) => <Result key={i} stream={stream}></Result>)}
+            </ul>
+
+        </div>
     );
 }

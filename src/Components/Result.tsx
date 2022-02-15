@@ -5,6 +5,9 @@ import { Stream } from "../Models/Stream";
 export function Result(props:{stream:Stream}) {
     
 
+
+    
+
     return (
         <div>
             <ul>
