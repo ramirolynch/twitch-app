@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { isTemplateExpression } from "typescript";
 import { Stream } from "../Models/Stream";
 
 export function Result(props:{stream:Stream}) {

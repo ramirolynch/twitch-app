@@ -12,7 +12,6 @@ export function fetchTopStreams() {
                         'Client-Id': `${process.env.REACT_APP_TWITCH_CLIENT_ID}`
                     }
                 })
-<<<<<<< HEAD
                 .then(response => response)
 }
 
@@ -28,18 +27,4 @@ export function fetchSearchedChannels(searchTerm:string) {
                     }
                  })
                  .then(response => response)
-=======
-                .then(response => response.data);
-}
-
-export function getTop() {
-
-    return axios.get(`https://api.twitch.tv/helix//games/top`, {
-                    headers: {
-                        'Authorization': `${process.env.REACT_APP_TWITCH_ACCESS_TOKEN}`,
-                        'Client-ID': `${process.env.REACT_APP_TWITCH_CLIENT_ID}`
-                    }
-                })
-                .then(response => response.data);
->>>>>>> 6d02b94a9cbde8cf79205ffee5d1abd490f41e1f
 }
