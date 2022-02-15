@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.notliked {
+  margin:0;
+  padding:0;
+  height:fit-content;
+  width:fit-content;
+  background:white;
+  border:none;
+}
+
+.show {
+  display:block;
+}
+.hide {
+  display:none;
+}
+
+.liked {
+  margin:0;
+  padding:0;
+  height:fit-content;
+  width:fit-content;
+  background:white;
+  border:none;
+  color:red;
+}

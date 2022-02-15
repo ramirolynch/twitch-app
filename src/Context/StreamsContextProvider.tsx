@@ -23,7 +23,7 @@ export function StreamContextProvider({children}:Props) {
     const [favorites, setFavorites] = useState<Stream[]>([])
 
     function addFave(stream:Stream) {
-        setStreamList([...favorites,stream]);
+        setFavorites([...favorites,stream]);
     }
 
     function removeFave(id:string) {
