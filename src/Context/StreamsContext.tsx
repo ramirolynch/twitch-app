@@ -1,20 +1,26 @@
-import { Streams, Stream } from "../Models/Stream";
+import { Streams, Stream, Channel } from "../Models/Stream";
 import { createContext} from 'react';
 import { StringifyOptions } from "querystring";
 
 
 export interface StreamContextModel {
-    streamList:Stream[];
+   
     favorites:Stream[];
+    faveChannels:Channel[];
     addFave:(stream:Stream)=>void;
+    addFaveChannel:(channel:Channel)=>void;
     removeFave:(id:string)=>void;
+    removeFaveChannel:(id:string)=>void;
 }
 
 const defaultValue:StreamContextModel = {
-    streamList:[],
+   
     favorites:[],
+    faveChannels:[],
     addFave:()=>{},
-    removeFave:()=>{}
+    addFaveChannel:()=>{},
+    removeFave:()=>{},
+    removeFaveChannel:()=>{}
 }
 
 export const StreamContext = createContext<StreamContextModel>(defaultValue);
