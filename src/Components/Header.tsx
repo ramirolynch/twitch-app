@@ -7,8 +7,8 @@ export function Header() {
 
         <div>
             Twitch Clone
-            <NavLink to='/'>Search</NavLink>
-            <NavLink to='/topgames'>Top Games</NavLink>
+            <NavLink to='/'>Trending</NavLink>
+            <NavLink to='/Search'>Search</NavLink>
             <NavLink to='/Favorites'>Favorites</NavLink>
 
         </div>

@@ -7,10 +7,12 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import {SearchPage} from './Components/SearchPage';
 import { FavoritesPage } from './Components/FavoritesPage';
 import { StreamContextProvider } from './Context/StreamsContextProvider';
+import { TrendingPage } from './Components/TrendingPage';
 
 
 ReactDOM.render(
   <React.StrictMode>
+<<<<<<< HEAD
     <BrowserRouter>
       <App />
       <Routes>
@@ -20,6 +22,19 @@ ReactDOM.render(
         
       </Routes>
     </BrowserRouter>
+=======
+    <StreamContextProvider>
+      <BrowserRouter>
+        <App />
+        <Routes>
+          <Route path='/' element={<TrendingPage/>}/>
+          <Route path='/Search' element={<SearchPage/>}/>
+          <Route path='/Favorites' element={<FavoritesPage/>}/>
+          <Route path='*' element={<Navigate to="/"/>}/>
+        </Routes>
+      </BrowserRouter>
+    </StreamContextProvider>
+>>>>>>> 2db6a72a260651e5b91d1d71b54c4e36983ed9e2
   </React.StrictMode>,
   document.getElementById('root')
 );
