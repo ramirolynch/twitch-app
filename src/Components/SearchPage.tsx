@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
-import { fetchTopStreams, fetchSearchedChannels } from "../Service/TwitchApi";
-import { Stream } from "stream";
-import { SearchResults } from "./SearchResults";
-import { Streams } from "../Models/Stream";
-
-
-
-
-
+import { fetchTopStreams } from "../Service/TwitchApi";
+import { Stream, Streams } from "../Models/Stream";
+import { Result } from "./Result";
 
 export function SearchPage() {
 
@@ -19,7 +13,7 @@ export function SearchPage() {
         fetchTopStreams().then(response => {console.log(response)
             // setTopStreams(response.data)
         });
-        // fetchSearchedChannels(searchTerm).then(response => setSearchList(response));
+        // searchChannels(searchTerm).then(response => setSearchList(response));
     },[searchTerm]);
 
         return (
@@ -29,7 +23,7 @@ export function SearchPage() {
                 <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type='text' name='channelSearch'/>
                 <button onClick={() => setSearchTerm(searchTerm)}>Search</button>
 
-                <SearchResults></SearchResults>
+                {searchList.map((stream, i) => <Result key={i} stream={stream}></Result>)}
 
             </div>
         );
