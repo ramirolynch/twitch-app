@@ -6,17 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import {SearchPage} from './Components/SearchPage';
 import { FavoritesPage } from './Components/FavoritesPage';
+import { StreamContextProvider } from './Context/StreamsContextProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-      <Routes>
-        <Route path='/' element={<SearchPage/>}/>
-        <Route path='/Favorites' element={<FavoritesPage/>}/>
-        <Route path='*' element={<Navigate to="/"/>}/>
-      </Routes>
-    </BrowserRouter>
+    <StreamContextProvider>
+      <BrowserRouter>
+        <App />
+        <Routes>
+          <Route path='/' element={<SearchPage/>}/>
+          <Route path='/Favorites' element={<FavoritesPage/>}/>
+          <Route path='*' element={<Navigate to="/"/>}/>
+        </Routes>
+      </BrowserRouter>
+      </StreamContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

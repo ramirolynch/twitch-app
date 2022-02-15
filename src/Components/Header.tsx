@@ -1,21 +1,16 @@
 import { useState } from "react";
-import { SearchBar } from "./SearchBar";
-
+import { NavLink } from "react-router-dom";
 
 export function Header() {
-
-    const [channelSearch, setChannelSearch] = useState('');
-
-    function setSearch(search:string) {
-
-        setChannelSearch(search);
-    }
 
     return (
 
         <div>
             Twitch Clone
-            <SearchBar onSubmit={setSearch}></SearchBar>
+            <NavLink to='/'>Search</NavLink>
+            <NavLink to='/topgames'>Top Games</NavLink>
+            <NavLink to='/Favorites'>Favorites</NavLink>
+
         </div>
     );
 }
