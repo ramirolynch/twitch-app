@@ -4,10 +4,11 @@ import { Result } from "./Result";
 
 
 
-    const [streamResults, setStreamResults] = useState<Stream[]>([]);
+    
 
     export function SearchResults() {
 
+        const [streamResults, setStreamResults] = useState<Stream[]>([]);
 
         return (
         <div>

@@ -11,18 +11,6 @@ import { StreamContextProvider } from './Context/StreamsContextProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-<<<<<<< HEAD
-    <StreamContextProvider>
-      <BrowserRouter>
-        <App />
-        <Routes>
-          <Route path='/' element={<SearchPage/>}/>
-          <Route path='/Favorites' element={<FavoritesPage/>}/>
-          <Route path='*' element={<Navigate to="/"/>}/>
-        </Routes>
-      </BrowserRouter>
-      </StreamContextProvider>
-=======
     <BrowserRouter>
       <App />
       <Routes>
@@ -32,7 +20,6 @@ ReactDOM.render(
         
       </Routes>
     </BrowserRouter>
->>>>>>> 6d02b94a9cbde8cf79205ffee5d1abd490f41e1f
   </React.StrictMode>,
   document.getElementById('root')
 );
