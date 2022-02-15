@@ -11,20 +11,22 @@ export function fetchTopStreams() {
     return axios.get<Streams>(`https://api.twitch.tv/helix/streams`, {
                     headers: {
                         'Authorization': `Bearer ${accessToken}`,
-                        'Client-Id': clientID
+                        'Client-Id': `${clientID}`
                     }
                 })
                 .then(response => response.data);
 }
 
-// function searchChannels(searchTerm:string){
+export function searchChannels(searchTerm:string){
 
-//     return axios.get<Searched>(`https://api.twitch.tv/helix/search/channels`, {
-//                 headers: {
-//                     'Authorization': `Bearer ${accessToken}`,
-//                     'Client-Id': clientID,
-//                     'query': searchTerm,
-//                 }
-//                 })
-//                 .then(response => response.data);
-// }
+    return axios.get<Searched>(`https://api.twitch.tv/helix/search/channels`, {
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`,
+                    'Client-Id': `${clientID}`
+                },
+                params: {
+                    'query': searchTerm
+                }  
+                })
+                .then(response => response.data);
+}

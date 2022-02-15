@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Stream } from "../Models/Stream";
+import { Stream, Channel } from "../Models/Stream";
 
-export function Result(props:{stream:Stream}) {
+export function TrendingResult(props:{stream:Stream}) {
 
     return (
         <div>

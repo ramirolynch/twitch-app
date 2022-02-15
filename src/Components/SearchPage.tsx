@@ -1,29 +1,30 @@
 import { useEffect, useState } from "react";
-import { fetchTopStreams } from "../Service/TwitchApi";
-import { Stream, Streams } from "../Models/Stream";
-import { Result } from "./Result";
+import { fetchTopStreams, searchChannels } from "../Service/TwitchApi";
+import { Channel, Stream, Streams } from "../Models/Stream";
+import { ChannelSearched } from "./ChannelSearched";
 
 export function SearchPage() {
 
     const [searchTerm, setSearchTerm] = useState('');
-    const [topStreams, setTopStreams] = useState<Streams[]>([]);
-    const [searchList, setSearchList] = useState<Stream[]>([]);
+    const [searchList, setSearchList] = useState<Channel[]>([]);
 
     useEffect(() => {
-        fetchTopStreams().then(response => {console.log(response)
-            // setTopStreams(response.data)
-        });
-        // searchChannels(searchTerm).then(response => setSearchList(response));
+        if (searchTerm === '') {
+
+        } else {
+            searchChannels(searchTerm).then(response => setSearchList(response.data));
+        }
+        
     },[searchTerm]);
 
         return (
 
             <div>
 
-                <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type='text' name='channelSearch'/>
-                <button onClick={() => setSearchTerm(searchTerm)}>Search</button>
-
-                {searchList.map((stream, i) => <Result key={i} stream={stream}></Result>)}
+                <input placeholder='Type here to search' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type='text' name='channelSearch'/>
+                {/* <button onClick={() => setSearchTerm(searchTerm)}>Search</button> */}
+                
+                {searchList.map((channel, i) => <ChannelSearched key={i} channel={channel}></ChannelSearched>)}
 
             </div>
         );
