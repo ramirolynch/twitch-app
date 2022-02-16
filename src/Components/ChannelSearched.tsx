@@ -26,7 +26,7 @@ export function ChannelSearched(props:{channel:Channel}) {
                 <li>Game name: {props.channel.game_name}</li> 
                 <li>Channel title: {props.channel.title}</li> 
                <li>Is live?: {props.channel.is_live === false ? 'Offline' : 'Online'}</li>
-               <li><img src={(props.channel.thumbnail_url).replace('{width}', '250').replace('{height}', '141')}/></li>
+               <li><img src={(props.channel.thumbnail_url)}/></li>
             </ul>
 
             {checkFavorites() === false ? <button className='notliked' onClick={()=> { addFaveChannel(props.channel)}}><span className={'material-icons-outlined'}>favorite</span></button> : <button className='liked' onClick={()=> { removeFaveChannel(props.channel.id)}}><span className={'material-icons-outlined'}>favorite</span></button> }
