@@ -13,17 +13,6 @@ import { TopGames } from './Components/TopGames';
 
 ReactDOM.render(
   <React.StrictMode>
-<<<<<<< HEAD
-    <BrowserRouter>
-      <App />
-      <Routes>
-        <Route path='/' element={<SearchPage/>}/>
-        <Route path='/Favorites' element={<FavoritesPage/>}/>
-        <Route path='*' element={<Navigate to="/"/>}/>
-        
-      </Routes>
-    </BrowserRouter>
-=======
     <StreamContextProvider>
       <BrowserRouter>
         <App />
@@ -36,7 +25,6 @@ ReactDOM.render(
         </Routes>
       </BrowserRouter>
     </StreamContextProvider>
->>>>>>> 2db6a72a260651e5b91d1d71b54c4e36983ed9e2
   </React.StrictMode>,
   document.getElementById('root')
 );

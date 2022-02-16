@@ -19,7 +19,7 @@ export function TrendingResult(props:{stream:Stream}) {
 
     return (
         <div>
-            <ul>
+            <ul className='trendingresult'>
                 <li>Username: {props.stream.user_name}</li> 
                 <li>Title: {props.stream.title}</li> 
                 <li>Viewers: {props.stream.viewer_count}</li>

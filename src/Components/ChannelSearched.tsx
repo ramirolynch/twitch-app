@@ -21,7 +21,8 @@ export function ChannelSearched(props:{channel:Channel}) {
 
     return (
         <div>
-            <ul>
+            <ul className='searched'>
+
                 <li>Game name: {props.channel.game_name}</li> 
                 <li>Channel title: {props.channel.title}</li> 
                <li>Is live?: {props.channel.is_live === false ? 'Offline' : 'Online'}</li>

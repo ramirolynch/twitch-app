@@ -13,7 +13,7 @@ export function FavoritesPage() {
    
     return(
 
-        <div>
+        <div className='trending'>
             <h2>Trending Favorites</h2>
             {favorites.length > 0 ? favorites.map((stream, i) => <TrendingResult key={i} stream={stream}></TrendingResult>): <h3>You haven't favorited any trending channels yet :)</h3>}
             <h2>Favorite Channels from Search</h2>
