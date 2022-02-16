@@ -1,61 +1,75 @@
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|");
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+* {
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
+<<<<<<< HEAD
 
 .active {
   background-color: black;
   color: white;
 }
 
+=======
+/* 
+>>>>>>> 19341247ee8e9e2e714808106ce36d78d92cefc0
 .material-icons-outlined {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
+  font-size: 24px; /* Preferred icon size */
+/* display: inline-block;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
   white-space: nowrap;
-  direction: ltr;
+  direction: ltr; */
 
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
+/* Support for all WebKit browsers. */
+/* -webkit-font-smoothing: antialiased; */
+*/
   /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+  /* text-rendering: optimizeLegibility; */
 
   /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
+  /* -moz-osx-font-smoothing: grayscale; */
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  /* font-feature-settings: "liga"; */
+
+
+  body {
+  background-color: #101013;
+  padding: 2rem;
 }
 
 .notliked {
-  margin:0;
-  padding:0;
-  height:fit-content;
-  width:fit-content;
-  background:white;
-  border:none;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  width: fit-content;
+  background: white;
+  border: none;
 }
 
 .show {
-  display:block;
+  display: block;
 }
 .hide {
-  display:none;
+  display: none;
 }
 
 .liked {
+<<<<<<< HEAD
   margin:0;
   padding:0;
   height:fit-content;
@@ -64,3 +78,37 @@ body {
   border:none;
   color:red;
 }
+=======
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  width: fit-content;
+  background: white;
+  border: none;
+  color: red;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  border: 1px solid red;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  border: 1px solid black;
+}
+.nav {
+  border: 1px solid black;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+/* .trendingresults {
+  
+} */
+>>>>>>> 19341247ee8e9e2e714808106ce36d78d92cefc0
