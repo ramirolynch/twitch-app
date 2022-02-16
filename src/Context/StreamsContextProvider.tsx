@@ -1,6 +1,6 @@
 import {  ReactNode, useEffect, useState } from "react";
 import { isTemplateSpan } from "typescript";
-import { Channel, Stream, Streams } from "../Models/Stream";
+import { Channel, Game, Stream, Streams } from "../Models/Stream";
 import { StreamContext } from "../Context/StreamsContext";
 
 
@@ -33,10 +33,26 @@ function removeFaveChannel(id:string) {
 
 }
 
+const [gamesList, setGamesList] = useState<Game[]>([])
+
+const [faveGames, setFaveGames] = useState<Game[]>([])
+
+function addFaveGame(game:Game) {
+    setFaveGames([...faveGames,game]);
+}
+
+function removeFaveGame(id:string) {
+    setFaveGames(faveGames.filter((game)=> game.id != id));
+}
+
+function setGames(games:Game[]){
+    setGamesList(games)
+}
+
 
     return (
 
-        <StreamContext.Provider value={{faveChannels, addFaveChannel, removeFaveChannel, favorites, addFave, removeFave}}>
+        <StreamContext.Provider value={{faveGames, gamesList, setGames, addFaveGame, removeFaveGame, faveChannels, addFaveChannel, removeFaveChannel, favorites, addFave, removeFave}}>
             {children}
         </StreamContext.Provider>  
     );

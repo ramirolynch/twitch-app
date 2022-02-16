@@ -30,3 +30,13 @@ export interface Channel {
     title:string;
     started_at:string;
 }
+
+export interface Games {
+    data:Game[];
+}
+
+export interface Game {
+    id:string;
+    name:string;
+    box_art_url:string;
+}
