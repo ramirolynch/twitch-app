@@ -69,16 +69,6 @@
 }
 
 .liked {
-<<<<<<< HEAD
-  margin:0;
-  padding:0;
-  height:fit-content;
-  width:fit-content;
-  background:white;
-  border:none;
-  color:red;
-}
-=======
   margin: 0;
   padding: 0;
   height: fit-content;
@@ -111,4 +101,3 @@ a {
 /* .trendingresults {
   
 } */
->>>>>>> 19341247ee8e9e2e714808106ce36d78d92cefc0
