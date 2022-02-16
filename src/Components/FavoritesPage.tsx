@@ -13,13 +13,21 @@ export function FavoritesPage() {
    
     return(
 
-        <div className='trending'>
+        <div>
+
+            <div className='favorites'>
+
+
             <h2>Trending Favorites</h2>
             {favorites.length > 0 ? favorites.map((stream, i) => <TrendingResult key={i} stream={stream}></TrendingResult>): <h3>You haven't favorited any trending channels yet :)</h3>}
+
             <h2>Favorite Channels from Search</h2>
             {faveChannels.length > 0 ? faveChannels.map((channel, i) => <ChannelSearched key={i} channel={channel}></ChannelSearched>) : <h3>You haven't favorited any searched channels yet :)</h3>}
+
             <h2>Favorite Games</h2>
             {faveGames.length > 0 ? faveGames.map((game, i) => <TopGame key={i} game={game}></TopGame>) : <h3>You haven't favorited any games yet :)</h3>}
+            </div>
         </div>
     );
+    
 }
