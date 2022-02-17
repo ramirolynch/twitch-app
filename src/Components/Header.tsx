@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { StreamContext } from "../Context/StreamsContext";
 
 export function Header() {
 
-    
+    const {faveChannels, faveGames, favorites} = useContext(StreamContext);
+
+    const numFaves = faveChannels.length + faveGames.length + favorites.length;
     return (
 
         <div>
@@ -13,8 +16,9 @@ export function Header() {
             <NavLink to='/'>Trending</NavLink>
             <NavLink to='/TopGames'>Top Games</NavLink>
             <NavLink to='/Search'>Search</NavLink>
-            <NavLink to='/Favorites'>Favorites</NavLink>
+            <NavLink to='/Favorites'>Favorites ({numFaves})</NavLink>
             </div>
         </div>
     );
 }
+
