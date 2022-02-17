@@ -20,7 +20,7 @@ export function ChannelSearched(props:{channel:Channel}) {
    
 
     return (
-        <div>
+        <div className="searchedframe">
             <div className="searched">
             <ul>
 
