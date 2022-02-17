@@ -11,44 +11,42 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }
-<<<<<<< HEAD
 
 .active {
   background-color: black;
   color: white;
 }
 
-=======
-/* 
->>>>>>> 19341247ee8e9e2e714808106ce36d78d92cefc0
 .material-icons-outlined {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px; /* Preferred icon size */
-/* display: inline-block;
+  font-size: 24px;
+  /*Preferred icon size */
+  display: inline-block;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
   white-space: nowrap;
-  direction: ltr; */
+  direction: ltr; 
 
-/* Support for all WebKit browsers. */
-/* -webkit-font-smoothing: antialiased; */
-*/
-  /* Support for Safari and Chrome. */
-  /* text-rendering: optimizeLegibility; */
+  /* Support for all WebKit browsers.  */
+ -webkit-font-smoothing: antialiased; 
 
-  /* Support for Firefox. */
-  /* -moz-osx-font-smoothing: grayscale; */
+   /* Support for Safari and Chrome.  */
+   text-rendering: optimizeLegibility; 
 
-  /* Support for IE. */
-  /* font-feature-settings: "liga"; */
+   /* Support for Firefox.  */
+   -moz-osx-font-smoothing: grayscale; 
 
+   /* Support for IE.  */
+   font-feature-settings: "liga";
 
+}
   body {
-  background-color: #101013;
+  background-color: #9352FD;
+  color: black;
   padding: 2rem;
 }
 
@@ -57,7 +55,7 @@
   padding: 0;
   height: fit-content;
   width: fit-content;
-  background: white;
+  background: #9352FD;
   border: none;
 }
 
@@ -73,7 +71,7 @@
   padding: 0;
   height: fit-content;
   width: fit-content;
-  background: white;
+  background: #9352FD;
   border: none;
   color: red;
 }

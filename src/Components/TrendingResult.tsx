@@ -21,14 +21,13 @@ export function TrendingResult(props:{stream:Stream}) {
         <div>
             
             <ul className="trendingresults">
-               <li> Username: {props.stream.user_name}</li> 
-                   <li> Title: {props.stream.title} </li>
-                   <li> Viewers: {props.stream.viewer_count} </li>
-                  <li>  <img src={(props.stream.thumbnail_url).replace('{width}', '250').replace('{height}', '141')}/>
-                    </li>  
+                <li><a target='_blank' href={'https://www.twitch.tv/' + props.stream.user_name}>{props.stream.user_name}</a></li> 
+                <li><a target='_blank' href={'https://www.twitch.tv/' + props.stream.user_name}>{props.stream.title}</a></li>
+                <li>Viewers: {props.stream.viewer_count}</li>
+                <li><a target='_blank' href={'https://www.twitch.tv/' + props.stream.user_name}><img src={(props.stream.thumbnail_url).replace('{width}', '250').replace('{height}', '141')}/></a></li>  
                 
             </ul>
-            <button> <a target="_blank" href={'https://www.twitch.tv/' + props.stream.user_name}>{props.stream.user_name}</a>  </button>
+            <button> <a target="_blank" href={'https://www.twitch.tv/' + props.stream.user_name}>Go to {props.stream.user_name}'s channel</a>  </button>
 
             {checkFavorites() === false ? <button className='notliked' onClick={()=> { addFave(props.stream)}}><span className={'material-icons-outlined'}>favorite</span></button> : <button className='liked' onClick={()=> { removeFave(props.stream.user_id)}}><span className={'material-icons-outlined'}>favorite</span></button> }
             

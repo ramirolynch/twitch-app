@@ -20,7 +20,7 @@ export function TopGame(props:{game:Game}) {
     return (
         <div>
             <ul className='topgame'>
-                <li>User name: {props.game.name}</li> 
+                <li><a target="_blank" href={'https://www.twitch.tv/directory/game/' + props.game.name}>{props.game.name}</a></li> 
                 <li><a target="_blank" href={'https://www.twitch.tv/directory/game/' + props.game.name}><img src={(props.game.box_art_url).replace('{width}', '155').replace('{height}', '204')}/></a></li>
             </ul>
 
