@@ -24,10 +24,10 @@ export function ChannelSearched(props:{channel:Channel}) {
             <div className="searched">
             <ul>
 
-                <li>Game name: {props.channel.game_name}</li> 
-                <li>Channel title: {props.channel.title}</li> 
-               <li>Is live?: {props.channel.is_live === false ? 'Offline' : 'Online'}</li>
-               <li><img src={(props.channel.thumbnail_url)}/></li>
+                <li>Playing: {props.channel.game_name}</li> 
+                <li>{props.channel.title}</li> 
+                <li>Is live?: {props.channel.is_live === false ? 'Offline' : 'Online'}</li>
+                <li><img src={(props.channel.thumbnail_url)}/></li>
             </ul>
 
             <button> <a target="_blank" href={'https://www.twitch.tv/' + props.channel.broadcaster_login}>Watch {props.channel.game_name} now!</a>  </button>

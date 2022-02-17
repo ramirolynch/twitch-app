@@ -31,7 +31,7 @@ useEffect(()=> {
 
       return(
   
-          <div>
+          <div className='topgames'>
 
            { gamesList.map(game=> <TopGame key={game.id} game={game}></TopGame>)}
              

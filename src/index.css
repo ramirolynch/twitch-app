@@ -96,6 +96,12 @@ button {
   max-width: 200px
 }
 
+.testbutton {
+  pointer-events: none;
+  background-color: white;
+  color: black;
+}
+
 .navbutton {
   display: flex;
   align-items: center;
@@ -104,6 +110,51 @@ button {
   max-height: max-content;
   min-width: 100px;
   min-height: 75px;
+}
+
+.topgames {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.topgamecontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.topgamecontainer ul {
+  margin-bottom: 0;
+}
+
+.topgame {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.topgame img{
+  border-radius: 0.5em;
+  margin-bottom: 0;
+}
+
+.favoritetrending {
+  margin-bottom: 50px;
+}
+
+.favoritegames {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.favoritesearches {
+  display: flex;
+  flex-direction: row;
 }
 
 .navbutton:hover {

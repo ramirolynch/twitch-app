@@ -22,7 +22,7 @@ export function SearchPage() {
             <div>
 
                 <input placeholder='Type here to search' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type='text' name='channelSearch'/>
-                {/* <button onClick={() => setSearchTerm(searchTerm)}>Search</button> */}
+                <button className='testbutton' onClick={() => setSearchTerm(searchTerm)}>Search</button>
                 
                 {searchList.map((channel, i) => <ChannelSearched key={i} channel={channel}></ChannelSearched>)}
 
