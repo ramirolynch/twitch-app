@@ -16,8 +16,8 @@ export function ChannelSearched(props:{channel:Channel}) {
         }
     }
 
-
-    
+ 
+   
 
     return (
         <div>
@@ -26,13 +26,17 @@ export function ChannelSearched(props:{channel:Channel}) {
 
                 <li>Playing: {props.channel.game_name}</li> 
                 <li>{props.channel.title}</li> 
-                <li>Is live?: {props.channel.is_live === false ? 'Offline' : 'Online'}</li>
+    
+                <li className={props.channel.is_live === false ? 'offline' : 'live'}>{props.channel.is_live === false ? 'OFFLINE' : 'LIVE'}</li>
                 <li><img src={(props.channel.thumbnail_url)}/></li>
             </ul>
+
+            <div className='center'>
 
             <button> <a target="_blank" href={'https://www.twitch.tv/' + props.channel.broadcaster_login}>Watch {props.channel.game_name} now!</a>  </button>
 
             {checkFavorites() === false ? <button className='notliked' onClick={()=> { addFaveChannel(props.channel)}}><span className={'material-icons-outlined'}>favorite</span></button> : <button className='liked' onClick={()=> { removeFaveChannel(props.channel.id)}}><span className={'material-icons-outlined'}>favorite</span></button> }
+            </div>
             </div>
         </div>
     

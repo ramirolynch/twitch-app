@@ -207,6 +207,45 @@ a {
   text-decoration: none;
 }
 
-/* .trendingresults {
-  
-} */
+
+
+.offline {
+
+  background-color: white;
+  color:black;
+  width: fit-content;
+  position:relative;
+  padding:0.2em;
+  border-radius:0.3em;
+  left:55%;
+  transform:translateX(80%);
+  transform: translateY(218%);
+
+}
+
+.live {
+
+  background-color: #FA2929;
+  color:white;
+  width: fit-content;
+  position: relative;
+  padding:0.3em;
+  border-radius:0.3em;
+  left:55%;
+  transform:translateX(80%);
+  transform: translateY(218%);
+
+}
+
+.center {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul > li:nth-last-child() {
+
+margin-bottom:0;
+
+}
+
