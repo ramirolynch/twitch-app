@@ -44,10 +44,70 @@
    font-feature-settings: "liga";
 
 }
-  body {
+
+body {
   background-color: #9352FD;
   color: black;
   padding: 2rem;
+  margin: 0;
+}
+
+button {
+  border-radius: 0.5em;
+}
+
+.trendingpage {
+  background-color: #9352FD;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.trendingresults {
+  border-radius: 0.5em;
+  background-color: antiquewhite;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid black;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.5)
+}
+
+.trendingthumbnail {
+  margin-right: 75px;
+  width: 25%;
+}
+
+.trendingthumbnail img{
+  border-radius: 0.5em;
+  box-shadow: 9px 9px 1px 1px rgba(0, 0, 0, 0.25)
+}
+
+.trendinginfo {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buttonbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px
+}
+
+.navbutton {
+  display: flex;
+  align-items: center;
+  color: white;
+  max-width: max-content;
+  max-height: max-content;
+  min-width: 100px;
+  min-height: 75px;
+}
+
+.navbutton:hover {
+  background-color: aqua;
 }
 
 .notliked {
@@ -80,16 +140,16 @@ ul {
   list-style-type: none;
 }
 li {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   text-align: center;
 }
 
 h1 {
   text-align: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .nav {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   text-align: center;
 }
 a {

@@ -14,7 +14,7 @@ export function TrendingPage() {
 
     return(
 
-        <div>
+        <div className='trendingpage'>
             {topStreams.map((stream, i) => <TrendingResult key={i} stream={stream}></TrendingResult>)}
         </div>
     );

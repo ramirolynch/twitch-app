@@ -18,18 +18,24 @@ export function TrendingResult(props:{stream:Stream}) {
 
 
     return (
-        <div>
+        <div className='trendingbox'>
             
             <ul className="trendingresults">
-                <li><a target='_blank' href={'https://www.twitch.tv/' + props.stream.user_name}>{props.stream.user_name}</a></li> 
-                <li><a target='_blank' href={'https://www.twitch.tv/' + props.stream.user_name}>{props.stream.title}</a></li>
-                <li>Viewers: {props.stream.viewer_count}</li>
-                <li><a target='_blank' href={'https://www.twitch.tv/' + props.stream.user_name}><img src={(props.stream.thumbnail_url).replace('{width}', '250').replace('{height}', '141')}/></a></li>  
-                
-            </ul>
-            <button> <a target="_blank" href={'https://www.twitch.tv/' + props.stream.user_name}>Go to {props.stream.user_name}'s channel</a>  </button>
+                <li className='trendingthumbnail'><a target='_blank' href={'https://www.twitch.tv/' + props.stream.user_name}><img src={(props.stream.thumbnail_url).replace('{width}', '187').replace('{height}', '105')}/></a></li>
 
-            {checkFavorites() === false ? <button className='notliked' onClick={()=> { addFave(props.stream)}}><span className={'material-icons-outlined'}>favorite</span></button> : <button className='liked' onClick={()=> { removeFave(props.stream.user_id)}}><span className={'material-icons-outlined'}>favorite</span></button> }
+                <li className='trendinginfo'>
+                    <a target='_blank' href={'https://www.twitch.tv/' + props.stream.user_name}>{props.stream.user_name}</a> 
+                    <a target='_blank' href={'https://www.twitch.tv/' + props.stream.user_name}>{props.stream.title}</a>
+                    Viewers: {props.stream.viewer_count}
+                </li>
+                <div className='buttonbox'>  
+                    <button className='navbutton'> <a target="_blank" href={'https://www.twitch.tv/' + props.stream.user_name}>Go to {props.stream.user_name}</a>  </button>
+                    {checkFavorites() === false ? <button className='notliked' onClick={()=> { addFave(props.stream)}}><span className={'material-icons-outlined'}>favorite</span></button> : <button className='liked' onClick={()=> { removeFave(props.stream.user_id)}}><span className={'material-icons-outlined'}>favorite</span></button> }
+                </div>
+            </ul>
+            
+
+            
             
             
         </div>
