@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { isTemplateMiddle } from "typescript";
 import { StreamContext } from "../Context/StreamsContext";
 import { Game } from "../Models/Stream";
 
