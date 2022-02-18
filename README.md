@@ -1,5 +1,5 @@
 # SWITCH - Built in React/Typescript
-[https://reactjs.org/docs/getting-started.html]
+https://reactjs.org/docs/getting-started.html
 
 An application used to browse, search and build a list of favorite streamers and games using Twitch.tv's API service.
 
@@ -23,3 +23,4 @@ This project was created by Britta Fountain, Ramiro Lynch and Dylan Lokatys in a
 -Chat interaction
 -Clips/Clips search
 -Stream preview
+-Ability to login
