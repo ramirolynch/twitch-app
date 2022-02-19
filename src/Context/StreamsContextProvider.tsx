@@ -1,6 +1,5 @@
 import {  ReactNode, useEffect, useState } from "react";
-import { isTemplateSpan } from "typescript";
-import { Channel, Game, Stream, Streams } from "../Models/Stream";
+import { Channel, Game, Stream } from "../Models/Stream";
 import { StreamContext } from "../Context/StreamsContext";
 
 
@@ -45,7 +44,7 @@ function addFave(stream:Stream) {
 }
 
 function removeFave(id:string) {
-    setFavorites(favorites.filter((stream)=> stream.user_id != id));
+    setFavorites(favorites.filter((stream)=> stream.user_id !== id));
 
 }
 
@@ -55,7 +54,7 @@ function addFaveChannel(channel:Channel) {
 }
 
 function removeFaveChannel(id:string) {
-    setFaveChannels(faveChannels.filter((channel)=> channel.id != id));
+    setFaveChannels(faveChannels.filter((channel)=> channel.id !== id));
 
 }
 
@@ -68,7 +67,7 @@ function addFaveGame(game:Game) {
 }
 
 function removeFaveGame(id:string) {
-    setFaveGames(faveGames.filter((game)=> game.id != id));
+    setFaveGames(faveGames.filter((game)=> game.id !== id));
 }
 
 function setGames(games:Game[]){
