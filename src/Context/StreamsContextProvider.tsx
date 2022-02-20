@@ -3,8 +3,6 @@ import { Channel, Game, Stream } from "../Models/Stream";
 import { StreamContext } from "../Context/StreamsContext";
 
 
-
-
 interface Props {children:ReactNode;}
 
 export function StreamContextProvider({children}:Props) {

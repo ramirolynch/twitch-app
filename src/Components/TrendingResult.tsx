@@ -17,7 +17,6 @@ export function TrendingResult(props:{stream:Stream}) {
 
 
 
-
     return (
         <div className='trendingbox'>
             
