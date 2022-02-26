@@ -299,3 +299,9 @@ a {
 ul > li:nth-last-child() {
   margin-bottom: 0;
 }
+
+.searched img {
+
+  border-radius: 0.5em;
+
+}
